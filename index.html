@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Cadastro</title>
+</head>
+<body>
+  <h1>Cadastro</h1>
+  <form>
+    <!-- Campo Nome -->
+    <label for="
+nome">Nome:</label>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+    <br><br>
+
+    <!-- Campo E-mail -->
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" onclick="window.location.href='mailto:'" placeholder="Digite seu e-mail">
+    <br><br>
+    
+
+
+
+    <!-- Campo Senha -->
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+    <button type="button" onclick="toggleSenha()">Mostrar/Ocultar</button>
+
+    <br><br>
+
+    <!-- Botão de Cadastro -->
+    <button type="submit">Cadastrar</button>
+  </form>
+  <script>
+  function toggleSenha() {
+    const campoSenha = document.getElementById("senha");
+    if (campoSenha.type === "password") {
+      campoSenha.type = "text";   // mostra a senha
+    } else {
+      campoSenha.type = "password"; // oculta a senha
+    }
+  }
+</script>
+  
+</body>
+</html>
+
